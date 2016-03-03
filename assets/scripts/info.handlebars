@@ -1,0 +1,23 @@
+{{!-- Each user will have his or her info displayed in the following format --}}
+<div class="user-info">
+  <h3>{{name}}</h3>
+  <ul class="info">
+    <li><b>Username:<b/> {{username}}</br></li>
+    <li><b>Email:<b/> {{email}}</br></li>
+    <li><b>address:<b/>
+      <ul class="address">
+        <li>{{address.street}}</li>
+        {{#if address.suite}}<li>{{address.suite}}</li>{{/if}}
+        <li>{{address.city}}, {{address.zipcode}}</li>
+        <li>geo-location: {{address.geo.lat}}, {{address.geo.lng}}</li>
+      </ul>
+    <li><b>Phone:<b/> {{phone}}</br></li>
+    <li><b>Website:<b/> {{website}}</br></li>
+    <li><b>Company:<b/>
+        <ul class="company">
+          <li><h5>{{company.name}}</h5></li>
+          <li>{{company.catchPhrase}}</li>
+          <li><i>{{company.bs}}</i></li>
+        </ul>
+  </ul>
+</div>
